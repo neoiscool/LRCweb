@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Players</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h2>Players</h2>
+    <ul>
+        {% for player in players %}
+            <li>{{ player[0] }} - Rank: {{ player[1] }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Back</a>
+</body>
+</html>
